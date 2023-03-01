@@ -4,12 +4,9 @@ import { Product, FooterBanner, HeroBanner, Navbar, Galery, Moment } from '../co
 
 const Home = ({ products, bannerData, galeryData, momentData }) => (
   <div>
-    <HeroBanner heroBanner={bannerData.length && bannerData[0]}  />
-    <Galery galery={galeryData} />
-    <Moment moment={momentData} />
 
     <div className="products-heading">
-      <h2>Akan Datang</h2>
+      <h2>Promo</h2>
       <p>Test</p>
     </div>
 
@@ -17,6 +14,7 @@ const Home = ({ products, bannerData, galeryData, momentData }) => (
       {products?.map((product) => <Product key={product._id} product={product} />)}
     </div>
 
+    {/* <FooterBanner footerBanner={bannerData && bannerData[0]} /> */}
   </div>
 );
 
