@@ -7,11 +7,11 @@ const Home = ({ products, bannerData, galeryData, momentData }) => (
 
     <div className="products-heading">
       <h2>Terbaru</h2>
-      <p>Test</p>
+      <h6>Koleksi terbaru kami</h6>
     </div>
 
     <div className="products-container">
-      {products?.map((product) => <Product key={product._id} product={product} />)}
+      {products?.map((product, index) => index < 6 &&  <Product key={product._id} product={product} />)}
     </div>
 
     {/* <FooterBanner footerBanner={bannerData && bannerData[0]} /> */}

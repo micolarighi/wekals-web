@@ -6,7 +6,7 @@ import { Product } from '../../components';
 import { useStateContext } from '../../context/StateContext';
 
 const ProductDetails = ({ product, products }) => {
-  const { image, name, details, price } = product;
+  const { image, name, details, price, link } = product;
   const [index, setIndex] = useState(0);
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
 
@@ -50,7 +50,7 @@ const ProductDetails = ({ product, products }) => {
             </p>
           </div>
           <div className="buttons">
-            <a class="btn btn-primary" href="https://www.tokopedia.com/tokokaoskatun/kaos-the-beatles-a-hard-day-s-night-s">Beli di tokopedia</a>
+            <a class="btn btn-primary" href={link}>Beli di tokopedia</a>
             {/* <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)}>Tambahkan ke Keranjang</button> */}
           </div>
         </div>

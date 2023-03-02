@@ -7,11 +7,11 @@ const Home = ({ products, bannerData, galeryData, momentData }) => (
 
     <div className="products-heading">
       <h2>Promo</h2>
-      <p>Test</p>
+      <h6>Koleksi dengan promo menarik</h6>
     </div>
 
     <div className="products-container">
-      {products?.map((product) => <Product key={product._id} product={product} />)}
+      {products?.map((product) => product.promo ? <Product key={product._id} product={product} /> : null)}
     </div>
 
     {/* <FooterBanner footerBanner={bannerData && bannerData[0]} /> */}

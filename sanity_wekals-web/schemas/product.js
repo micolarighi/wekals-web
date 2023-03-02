@@ -16,6 +16,11 @@ export default {
         name: 'name',
         title: 'Nama Barang',
         type: 'string',
+      },      
+      { 
+        name: 'link',
+        title: 'Link Barang',
+        type: 'string',
       },
       { 
         name: 'slug',
@@ -35,6 +40,16 @@ export default {
         name: 'details',
         title: 'Detail Barang',
         type: 'string',
+      },
+      {
+        name: 'publish',
+        title : 'SET sebagai Akan Datang?',
+        type : 'boolean',
+      },
+      {
+        name : 'promo',
+        title : 'Ada Promosi?',
+        type : 'boolean',
       }
     ]
   }

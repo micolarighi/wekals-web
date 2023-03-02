@@ -7,7 +7,7 @@ const Home = ({ products, bannerData, galeryData, momentData }) => (
 
     <div className="products-heading">
       <h2>Shop</h2>
-      <p>Test</p>
+      <h6>Kumpulan Koleksi Terbaik Kami</h6>
     </div>
 
     <div className="products-container">
