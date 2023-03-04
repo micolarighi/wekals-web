@@ -5,10 +5,19 @@ import Image from 'next/image'
 import Logo from "public/logo.png"
 
 import { Cart } from './';
-import { useStateContext} from '../context/StateContext';
+import { useStateContext } from '../context/StateContext';
 
 const Navbar = () => {
   const { showCart, setShowCart, totalQuantities } = useStateContext();
+  const [show, setShow] = React.useState(false)
+
+  function handleShow() {
+    setShow(!show)
+  }
+
+  function handleToggle() {
+    setShow(true)
+  }
 
   return (
     <>
@@ -62,14 +71,14 @@ const Navbar = () => {
             <span className="cart-item-qty">{totalQuantities}</span>
         </button>
 
-          {showCart && <Cart />}
-      </div>
-      </div>
-      </div>
-      </div>
-    </nav>
+                {showCart && <Cart />}
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
     </>
-    
+
   )
 }
 
