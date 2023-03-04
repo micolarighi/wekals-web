@@ -20,19 +20,20 @@ const Cart = () => {
         className="cart-heading ms-4"
         onClick={() => setShowCart(false)}>
           <AiOutlineLeft />
-          <span className="heading">Keranjang Belanja Anda</span>
+          <span className="heading">Kalkulator Belanja Anda</span>
           <span className="cart-num-items">({totalQuantities} barang)</span>
         </button>
 
         {cartItems.length < 1 && (
           <div className="empty-cart">
             <AiOutlineShopping size={150} />
-            <h3>Keranjang anda masih kosong</h3>
+            <h3>Kalkulator Belanja Masih Kosong </h3>
+            <h5 className='fs-6 text-secondary'>Tambah beberapa produk untuk melakukan kalkulasi harga</h5>
             <Link href="/">
               <button
                 type="button"
                 onClick={() => setShowCart(false)}
-                className="btn"
+                className="btn btn-primary"
               >
                 Lanjut Belanja
               </button>
@@ -73,6 +74,10 @@ const Cart = () => {
         </div>
         {cartItems.length >= 1 && (
           <div className="cart-bottom">
+          <div className='text-start'>
+                <span className='text-danger'>PENTING</span>
+                <h5 className='text-secondary'>Total Harga belum termasuk ongkir</h5>
+            </div>
             <div className="total">
               <h3>Subtotal:</h3>
               <h3>Rp. {totalPrice}</h3>

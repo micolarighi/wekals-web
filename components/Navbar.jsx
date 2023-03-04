@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { AiOutlineShopping } from 'react-icons/ai'
+import { AiOutlineCalculator } from 'react-icons/ai'
 import Image from 'next/image'
 import Logo from "public/logo.png"
 
@@ -58,7 +58,7 @@ const Navbar = () => {
       </div>
       <div style={{marginTop: -20}} class="me-4 text-end">
       <button type="button" class="cart-icon fs-4" onClick={() => setShowCart(true)}>
-            <AiOutlineShopping />
+            <AiOutlineCalculator />
             <span className="cart-item-qty">{totalQuantities}</span>
         </button>
 

@@ -16,9 +16,9 @@ const Galery = ({ galery }) => {
             src={urlFor(galery[0].image)}
             alt="First slide"
           />
-          <Carousel.Caption>
-            <h3>Judul Disini</h3>
-            <p>Deskripsi Disini.</p>
+          <Carousel.Caption className='carousel-caption'>
+            <h3>{galery[0].judul}</h3>
+            <p>{galery[0].desc}</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -27,9 +27,9 @@ const Galery = ({ galery }) => {
             src={urlFor(galery[1].image)}
             alt="Second slide"
           />
-          <Carousel.Caption>
-            <h3>Judul Disini</h3>
-            <p>Deskripsi Disini.</p>
+          <Carousel.Caption className='carousel-caption'>
+            <h3>{galery[1].judul}</h3>
+            <p>{galery[1].desc}</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -38,9 +38,9 @@ const Galery = ({ galery }) => {
             src={urlFor(galery[2].image)}
             alt="Third slide"
           />
-          <Carousel.Caption>
-            <h3>Judul Disini</h3>
-            <p>Deskripsi Disini.</p>
+          <Carousel.Caption className='carousel-caption'>
+            <h3>{galery[2].judul}</h3>
+            <p>{galery[2].desc}</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

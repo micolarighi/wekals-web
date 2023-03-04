@@ -51,7 +51,9 @@ const ProductDetails = ({ product, products }) => {
           </div>
           <div className="buttons">
             <a class="btn btn-primary" href={link}>Beli di tokopedia</a>
-            {/* <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)}>Tambahkan ke Keranjang</button> */}
+          </div>
+          <div className="buttons">
+            <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)}>TAMBAHKAN KE KALKULATOR</button>
           </div>
         </div>
       </div>

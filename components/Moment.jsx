@@ -16,9 +16,9 @@ const Moment = ({ moment }) => {
             src={urlFor(moment[0].image)}
             alt="First slide"
           />
-          <Carousel.Caption>
-            <h3>Judul Disini</h3>
-            <p>Deskripsi Disini.</p>
+          <Carousel.Caption className='carousel-caption'>
+            <h3>{moment[0].judul}</h3>
+            <p>{moment[0].desc}</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -27,9 +27,9 @@ const Moment = ({ moment }) => {
             src={urlFor(moment[1].image)}
             alt="Second slide"
           />
-          <Carousel.Caption>
-            <h3>Judul Disini</h3>
-            <p>Deskripsi Disini.</p>
+          <Carousel.Caption className='carousel-caption'>
+            <h3>{moment[1].judul}</h3>
+            <p>{moment[1].desc}</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -38,9 +38,9 @@ const Moment = ({ moment }) => {
             src={urlFor(moment[2].image)}
             alt="Third slide"
           />
-          <Carousel.Caption>
-            <h3>Judul Disini</h3>
-            <p>Deskripsi Disini.</p>
+          <Carousel.Caption className='carousel-caption'>
+            <h3>{moment[2].judul}</h3>
+            <p>{moment[2].desc}</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

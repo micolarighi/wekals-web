@@ -16,5 +16,10 @@ export default {
         title: 'Judul',
         type: 'string',
       },
+      { 
+        name: 'desc',
+        title: 'Deskripsi Singkat',
+        type: 'string',
+      },
     ]
   }

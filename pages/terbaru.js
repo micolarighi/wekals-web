@@ -4,12 +4,10 @@ import { Product, FooterBanner, HeroBanner, Navbar, Galery, Moment } from '../co
 
 const Home = ({ products, bannerData, galeryData, momentData }) => (
   <div>
-
     <div className="products-heading">
       <h2>Terbaru</h2>
       <h6>Koleksi terbaru kami</h6>
     </div>
-
     <div className="products-container">
       {products?.map((product, index) => index < 6 &&  <Product key={product._id} product={product} />)}
     </div>
