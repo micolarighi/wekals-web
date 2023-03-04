@@ -38,6 +38,7 @@ width: 100%;
 
 .carousel-caption h3{
   font-size: 2rem;
+  line-height: 0.9;
 }
 
 .carousel-caption p {
@@ -668,10 +669,16 @@ margin-top: 160px;
   .product-image{
     border-radius: 15px;
     background-color: #ebebeb;
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     cursor: pointer;
     transition: .3s ease-in-out;
+  }
+
+  .product-name {
+    font-size: 1.2rem;
+    max-width: 160px;
+    overflow: hidden;
   }
 
   .nav-link:after {

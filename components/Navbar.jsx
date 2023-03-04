@@ -16,7 +16,7 @@ const Navbar = () => {
   }
 
   function handleToggle() {
-    setShow(true)
+    setShow(!show)
   }
 
   return (
@@ -26,11 +26,11 @@ const Navbar = () => {
       <div>
       <a className="navbar-brand pt-5"><Link href="/"><Image src={Logo} width={85} height={53}/></Link></a>
       </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button onClick={handleToggle} class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="w-100" style={{marginTop : -7}}>
-      <div class="collapse navbar-collapse justify-content-end" id='navbarNav'>
+      <div className={show ? "collapse navbar-collapse justify-content-end show" : "collapse navbar-collapse justify-content-end"} id='navbarNav'>
       <ul class="navbar-nav">
           <li class="nav-item language d-flex">
             <a class="nav-link me-2" href="#">Bantuan |</a>
@@ -40,27 +40,27 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <div className={show ? "collapse navbar-collapse justify-content-center show" : "collapse navbar-collapse justify-content-center"} id="navbarNav">
       <div style={{marginTop : -15}}>
         <ul class="navbar-nav fs-5">
           <li class="nav-item nav-routing">
             <Link href="/">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" onClick={handleShow}>Home</a>
             </Link>
           </li>
           <li class="nav-item nav-routing">
             <Link href="/shop"> 
-              <a class="nav-link">Shop</a>
+              <a class="nav-link" onClick={handleShow}>Shop</a>
             </Link>
           </li>
           <li class="nav-item nav-routing">
             <Link href="/terbaru">
-              <a class="nav-link" href="#">Terbaru</a>
+              <a class="nav-link" onClick={handleShow}>Terbaru</a>
             </Link>
           </li>
           <li class="nav-item nav-routing">
             <Link href="/promo">
-              <a class="nav-link" href="#">Promo</a>
+              <a class="nav-link" onClick={handleShow}>Promo</a>
             </Link>
           </li>
         </ul>
