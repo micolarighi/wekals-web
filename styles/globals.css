@@ -669,8 +669,8 @@ margin-top: 160px;
   .product-image{
     border-radius: 15px;
     background-color: #ebebeb;
-    width: 160px;
-    height: 160px;
+    width: 40vw;
+    height: 40%;
     cursor: pointer;
     transition: .3s ease-in-out;
   }
@@ -782,8 +782,8 @@ margin-top: 160px;
     height: 350px;
   }
   .cart-container{
-    width: 415px;
-  padding: 4px;
+    width: 100vw;
+    padding: 4px;
   }
   .cart-heading{
     margin-top: 35px;

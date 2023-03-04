@@ -21,7 +21,7 @@ const Cart = () => {
         onClick={() => setShowCart(false)}>
           <AiOutlineLeft />
           <span className="heading">Kalkulator Belanja Anda</span>
-          <span className="cart-num-items">({totalQuantities} barang)</span>
+          <span className="cart-num-items">({totalQuantities})</span>
         </button>
 
         {cartItems.length < 1 && (
