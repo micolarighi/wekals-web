@@ -92,7 +92,6 @@ width: 100%;
 }
 .marquee {
   position: relative;
-  height: 400px;
   width: 100%;
   overflow-x: hidden;
 }
@@ -586,23 +585,20 @@ padding: 6px;
 }
 .quantity-desc .plus{
   color: rgb(49, 168, 49);
-
 }
 
 .maylike-products-wrapper{
-  margin-top: 120px;
+  margin-top: 40px;
 }
 .maylike-products-wrapper h2{
   text-align: center;
-  margin: 50px;
-
+  margin: 20px;
   font-size: 28px;
 }
 .maylike-products-container{
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-top: 20px;
 }
 .max-qty{
   font-weight: 500;
