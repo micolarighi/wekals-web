@@ -1,24 +1,35 @@
 import React from 'react';
-import { AiFillInstagram, AiOutlineTwitter} from 'react-icons/ai';
+import { AiFillInstagram, AiOutlineTwitter, AiFillFacebook} from 'react-icons/ai';
+import { FaTiktok,FaEnvelope, FaPhone } from 'react-icons/fa';
+import Link from 'next/link'
 
 const Footer = () => {
   return (
     <div className="footer-container">
-      <div className='me-5'>
-          <h3>Wekals 2023</h3>
-          <ul>
-            <li><a href="">About Wekals</a></li>
-            <li><a href="">Portofolio</a></li>
-          </ul>
+      <h1>Wekals 2023</h1>
+      <hr />
+        <div className='icons'>
+          <h4>Ikuti Kami</h4>
+          <Link href={''}> 
+            <AiFillInstagram  className='mx-1'/>
+          </Link>
+          <Link href={''}>
+            <AiOutlineTwitter  className='mx-1'/>
+          </Link>
+          <Link href={''}>
+            <AiFillFacebook  className='mx-1'/>
+          </Link>
+          <Link href={''}>
+            <FaTiktok className='mx-1'/>
+          </Link>
+        </div>
+        <div className='icons mt-3'>
+          <h4>Kontak Kami</h4>
+            <FaEnvelope className='mx-3'/> <span className='fs-5'>email@gmail.com</span>
+            <br />
+            <FaPhone className='mx-3'/> <span className='fs-5'>08xxxxxxx</span> 
+        </div>
       </div>
-      <div>
-      <h3>Ikuti Kami</h3>
-      <p className="icons">
-        <AiFillInstagram />
-        <AiOutlineTwitter />
-      </p>
-      </div>
-    </div>
   )
 }
 
