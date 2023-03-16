@@ -1,17 +1,16 @@
 import React from 'react'
 import { client } from '../lib/client';
-import { Product, FooterBanner, HeroBanner, Navbar, Galery, Moment } from '../components';
+import { Product, FooterBanner, HeroBanner, Navbar, Galery, Moment, EmptyItem } from '../components';
 
 const Home = ({ products, bannerData, galeryData, momentData }) => (
   <div>
-
     <div className="products-heading">
       <h2>Shop</h2>
       <h6>Kumpulan Koleksi Terbaik Kami</h6>
     </div>
 
     <div className="products-container">
-      {products?.map((product) => <Product key={product._id} product={product} />)}
+      {products > 0 ? products?.map((product) => <Product key={product._id} product={product} />) : <EmptyItem/>}
     </div>
 
     {/* <FooterBanner footerBanner={bannerData && bannerData[0]} /> */}

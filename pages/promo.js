@@ -1,6 +1,6 @@
 import React from 'react'
 import { client } from '../lib/client';
-import { Product, FooterBanner, HeroBanner, Navbar, Galery, Moment } from '../components';
+import { Product, FooterBanner, HeroBanner, Navbar, Galery, Moment, EmptyItem } from '../components';
 
 const Home = ({ products, bannerData, galeryData, momentData }) => (
   <div>
@@ -11,7 +11,7 @@ const Home = ({ products, bannerData, galeryData, momentData }) => (
     </div>
 
     <div className="products-container">
-      {products?.map((product) => product.promo ? <Product key={product._id} product={product} /> : null)}
+      {products > 0 ? products?.map((product) => product.promo ? <Product key={product._id} product={product} /> : <EmptyItem/>) : <EmptyItem/>} {}
     </div>
 
     {/* <FooterBanner footerBanner={bannerData && bannerData[0]} /> */}

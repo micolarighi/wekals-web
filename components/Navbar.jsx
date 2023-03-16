@@ -24,7 +24,7 @@ const Navbar = () => {
     <nav class="navbar fixed-top navbar-expand-lg bg-white py-0 my-0 mx-0 px-0">
       <div class='container-fluid py-0 my-0'>
       <div>
-      <a className="navbar-brand pt-5"><Link href="/"><Image src={Logo} width={85} height={53}/></Link></a>
+      <a className="navbar-brand"><Link href="/"><Image className='pt-2' src={Logo} width={85} height={53}/></Link></a>
       </div>
       <button onClick={handleToggle} class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

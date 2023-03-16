@@ -7,29 +7,37 @@ const Footer = () => {
   return (
     <div className="footer-container">
       <h1>Wekals 2023</h1>
+      <div className="inner-footer mt-4">
       <hr />
-        <div className='icons'>
+        <div className='icons mx-3'>
           <h4>Ikuti Kami</h4>
           <Link href={''}> 
-            <AiFillInstagram  className='mx-1'/>
+            <AiFillInstagram  className='mx-1 fs-3'/>
           </Link>
           <Link href={''}>
-            <AiOutlineTwitter  className='mx-1'/>
+            <AiOutlineTwitter  className='mx-1 fs-3'/>
           </Link>
           <Link href={''}>
-            <AiFillFacebook  className='mx-1'/>
+            <AiFillFacebook  className='mx-1 fs-3'/>
           </Link>
           <Link href={''}>
-            <FaTiktok className='mx-1'/>
+            <FaTiktok className='mx-1 fs-3'/>
           </Link>
         </div>
-        <div className='icons mt-3'>
+        <div className='icons mx-3'>
           <h4>Kontak Kami</h4>
-            <FaEnvelope className='mx-3'/> <span className='fs-5'>email@gmail.com</span>
-            <br />
-            <FaPhone className='mx-3'/> <span className='fs-5'>08xxxxxxx</span> 
+          <div className='d-flex flex-column'>
+            <div>
+              <FaEnvelope className='mr-1 ms-3 fs-6'/> <span className='fs-6'>email@gmail.com</span>
+            </div>
+            <div style={{marginTop:-20}}>
+              <FaPhone className='mr-1 ms-3 fs-6'/> <span className='fs-6'>08xxxxxxx</span> 
+            </div>
+          </div>
         </div>
       </div>
+      </div>
+
   )
 }
 

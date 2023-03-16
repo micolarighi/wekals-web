@@ -7,3 +7,4 @@ export { default as FooterBanner } from './FooterBanner';
 export { default as Cart } from './Cart';
 export {default as Galery} from './Galery'
 export {default as Moment} from './Moment'
+export {default as EmptyItem} from './EmptyItem'

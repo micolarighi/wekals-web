@@ -338,18 +338,23 @@ text-align: end;
 }
 
 .footer-container{
-  padding: 40px 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   color: white;
   margin-top: 20px;
-  display: flex;
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  gap: 10px;
   position: sticky !important;
   bottom: 0;
   background-color: #111111;
 }
+
+.inner-footer {
+  justify-content: center;
+  display: flex;
+}
+
 .footer-container .icons{
   font-size: 30px;
 }
