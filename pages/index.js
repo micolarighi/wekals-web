@@ -17,7 +17,7 @@ const Home = ({ products, bannerData, galeryData, momentData, setupData }) => (
       {(setupData[0].custom_section_type === 1 && 
         products?.map((product) => 
         product.publish ? <Product key={product._id} product={product} /> : null )
-        || (custom_section_type === 2 && 
+        || (setupData[0].custom_section_type === 2 && 
           products?.map((product) => 
           product.bestseller ? <Product key={product._id} product={product} /> : null )
         ))}
