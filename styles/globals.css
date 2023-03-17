@@ -77,13 +77,13 @@ width: 100%;
   margin-top: -5px;
 }
 
-
 .navbar-container{
   display: flex;
   justify-content: space-between;
   margin: 6px 18px;
   position: relative;
 }
+
 .marquee-text{
   font-size: 29px;
   font-weight: 600;
@@ -121,7 +121,7 @@ width: 100%;
 
 }
 .cart-icon{
-  font-size: 25px;
+  font-size: 20px;
   color: gray;
   cursor: pointer;
   position: relative;
@@ -667,6 +667,15 @@ margin-top: 160px;
     height: 560px;
   }
 
+  .navbar-container-fluid {
+    display: flex;
+    justify-content: start !important;
+  }
+
+  .navbar-brand {
+    margin-right: 35vw;
+  }
+
   .carousel-caption {
     text-shadow: 2px 2px 0px #00000081, 5px 4px 0px rgba(0,0,0,0.15);
     line-height: 1;
@@ -710,7 +719,8 @@ margin-top: 160px;
 }
 
   .cart-icon {
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-left: 10px;
   }
 
   .nav-link:hover:after {
@@ -734,7 +744,8 @@ margin-top: 160px;
   }
 
   .cart-icon {
-    font-size: 40px !important;
+    font-size: 25px !important;
+    margin-bottom: 20px;
   }
 
   .hero-banner-image{

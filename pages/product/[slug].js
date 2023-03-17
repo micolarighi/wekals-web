@@ -6,7 +6,7 @@ import { Product } from '../../components';
 import { useStateContext } from '../../context/StateContext';
 
 const ProductDetails = ({ product, products }) => {
-  const { image, name, details, price, link } = product;
+  const { image, name, details, price, link, publish } = product;
   const [index, setIndex] = useState(0);
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
 
@@ -41,20 +41,27 @@ const ProductDetails = ({ product, products }) => {
           <h4>Deskripsi: </h4>
           <p>{details}</p>
           <p className="price"> {product.publish ? "Barang belum tersedia" : `Rp. ${price}`}</p>
-          <div className="quantity">
+          {/* <div className="quantity">
             <h3>Jumlah:</h3>
             <p className="quantity-desc">
               <span className="minus" onClick={decQty}><AiOutlineMinus /></span>
               <span className="num">{qty}</span>
               <span className="plus" onClick={incQty}><AiOutlinePlus /></span>
             </p>
-          </div>
-          <div className="buttons">
-            <a class="btn btn-primary" href={link} target="_blank">Beli di tokopedia</a>
-          </div>
-          <div className="buttons">
-            <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty, link)}>TAMBAHKAN KE KERANJANG</button>
-          </div>
+          </div> */}
+
+          {publish ? null : 
+                    <div>
+                    <div className="buttons">
+                      <a class="btn btn-primary" href={link} target="_blank">Beli di tokopedia</a>
+                    </div>
+                    <div className="buttons">
+                      <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty, link)}>TAMBAHKAN KE KERANJANG</button>
+                    </div>
+                    </div>
+          }
+
+
         </div>
       </div>
 
