@@ -50,6 +50,11 @@ export default {
         name : 'promo',
         title : 'Ada Promosi?',
         type : 'boolean',
+      },
+      {
+        name : 'bestseller',
+        title : 'Best Seller?',
+        type : 'boolean',
       }
     ]
   }

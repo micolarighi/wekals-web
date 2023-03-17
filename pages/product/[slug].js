@@ -11,7 +11,7 @@ const ProductDetails = ({ product, products }) => {
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
 
   const handleBuyNow = () => {
-    onAdd(product, qty);
+    onAdd(product, qty, link);
 
     setShowCart(true);
   }
@@ -40,7 +40,7 @@ const ProductDetails = ({ product, products }) => {
           
           <h4>Deskripsi: </h4>
           <p>{details}</p>
-          <p className="price">Rp. {price}</p>
+          <p className="price"> {product.publish ? "Barang belum tersedia" : `Rp. ${price}`}</p>
           <div className="quantity">
             <h3>Jumlah:</h3>
             <p className="quantity-desc">
@@ -50,10 +50,10 @@ const ProductDetails = ({ product, products }) => {
             </p>
           </div>
           <div className="buttons">
-            <a class="btn btn-primary" href={link}>Beli di tokopedia</a>
+            <a class="btn btn-primary" href={link} target="_blank">Beli di tokopedia</a>
           </div>
           <div className="buttons">
-            <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)}>TAMBAHKAN KE KALKULATOR</button>
+            <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty, link)}>TAMBAHKAN KE KERANJANG</button>
           </div>
         </div>
       </div>

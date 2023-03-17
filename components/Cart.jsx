@@ -20,15 +20,14 @@ const Cart = () => {
         className="cart-heading ms-4"
         onClick={() => setShowCart(false)}>
           <AiOutlineLeft />
-          <span className="heading">Kalkulator Belanja Anda</span>
+          <span className="heading">Keranjang Belanja</span>
           <span className="cart-num-items">({totalQuantities})</span>
         </button>
 
         {cartItems.length < 1 && (
           <div className="empty-cart">
             <AiOutlineShopping size={150} />
-            <h3>Kalkulator Belanja Masih Kosong </h3>
-            <h5 className='fs-6 text-secondary'>Tambah beberapa produk untuk melakukan kalkulasi harga</h5>
+            <h3>Keranjang Anda Masih Kosong </h3>
             <Link href="/">
               <button
                 type="button"
@@ -52,13 +51,7 @@ const Cart = () => {
                 </div>
                 <div className="flex bottom">
                   <div>
-                  <p className="quantity-desc">
-                    <span className="minus" onClick={() => toggleCartItemQuanitity(item._id, 'dec') }>
-                    <AiOutlineMinus />
-                    </span>
-                    <span className="num" onClick="">{item.quantity}</span>
-                    <span className="plus" onClick={() => toggleCartItemQuanitity(item._id, 'inc') }><AiOutlinePlus /></span>
-                  </p>
+                  <a href={item.link} target="_blank" className="checkoutBtn btn btn-primary">BELI DI TOKOPEDIA</a>
                   </div>
                   <button
                     type="button"
@@ -88,5 +81,6 @@ const Cart = () => {
     </div>
   )
 }
+
 
 export default Cart

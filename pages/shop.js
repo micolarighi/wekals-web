@@ -10,7 +10,7 @@ const Home = ({ products, bannerData, galeryData, momentData }) => (
     </div>
 
     <div className="products-container">
-      {products > 0 ? products?.map((product) => <Product key={product._id} product={product} />) : <EmptyItem/>}
+      {products.length > 0 ? products?.map((product) => !product.publish ? <Product key={product._id} product={product} /> : null) : <EmptyItem/>}
     </div>
 
     {/* <FooterBanner footerBanner={bannerData && bannerData[0]} /> */}

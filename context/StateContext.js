@@ -34,7 +34,7 @@ export const StateContext = ({ children }) => {
       setCartItems([...cartItems, { ...product }]);
     }
 
-    toast.success(`${qty} ${product.name} telah di tambahkan ke kalkulator belanja.`);
+    toast.success(`${product.name} telah di tambahkan ke keranjang.`);
   } 
 
   const onRemove = (product) => {

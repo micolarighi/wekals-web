@@ -1,23 +1,28 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { client } from '../lib/client';
 import { Product, FooterBanner, HeroBanner, Navbar, Galery, Moment, EmptyItem } from '../components';
 
-const Home = ({ products, bannerData, galeryData, momentData }) => (
+const Home = ({ products, bannerData, galeryData, momentData }) => {
+  let promoCounter = 0;
+  function updateCounter () {
+    promoCounter += 1
+  }
+  return (
   <div>
-
     <div className="products-heading">
       <h2>Promo</h2>
       <h6>Koleksi dengan promo menarik</h6>
     </div>
 
     <div className="products-container">
-      {products > 0 ? products?.map((product) => product.promo ? <Product key={product._id} product={product} /> : <EmptyItem/>) : <EmptyItem/>} {}
+      {products?.map((product) => product.promo ? updateCounter() : null)}
+      {promoCounter > 0 ? products?.map((product) => !product.publish ? product.promo ? <Product key={product._id} product={product} /> : null : null) : <EmptyItem/>}
     </div>
 
     {/* <FooterBanner footerBanner={bannerData && bannerData[0]} /> */}
   </div>
 );
-
+  }
 export const getServerSideProps = async () => {
   const query = '*[_type == "product"]';
   const products = await client.fetch(query);
