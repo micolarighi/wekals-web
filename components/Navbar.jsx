@@ -27,7 +27,7 @@ const Navbar = () => {
       <a className="navbar-brand"><Link href="/"><Image className='pt-2' src={Logo} width={85} height={53}/></Link></a>
       </div>
       <button onClick={handleToggle} class="navbar-toggler fw-bold pb-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        MENU
+        <span class="navbar-toggler-icon"></span>
       </button>
 
       <div className={show ? "collapse navbar-collapse justify-content-center show" : "collapse navbar-collapse justify-content-center"} id="navbarNav">
