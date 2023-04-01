@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <>
-    <nav class="navbar fixed-top navbar-expand-lg bg-white my-0 mx-0 px-0">
+    <nav class="navbar fixed-top navbar-expand-lg bg-white my-0">
       <div class='container-fluid navbar-container-fluid py-0 my-0'>
       <div>
       <a className="navbar-brand"><Link href="/"><Image className='pt-2' src={Logo} width={85} height={53}/></Link></a>
@@ -63,7 +63,7 @@ const Navbar = () => {
 
             </div>
         <div className='me-3'>
-            <button type="button" class="cart-icon fs-4 me-3" onClick={() => setShowCart(true)}>
+            <button type="button" class="cart-icon fs-4" onClick={() => setShowCart(true)}>
                   <AiOutlineShoppingCart />
                   <span className="cart-item-qty">{totalQuantities}</span>
             </button>

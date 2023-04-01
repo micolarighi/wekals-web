@@ -670,7 +670,6 @@ margin-top: 160px;
 
   .navbar-container-fluid {
     display: flex;
-    justify-content: start !important;
   }
 
   .navbar-brand {
