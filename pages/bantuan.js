@@ -6,12 +6,17 @@ const Bantuan = ({ products, bannerData, galeryData, momentData }) => (
   <div>
     <div className="products-heading">
       <h2>Bantuan</h2>
-      <div className="list-group">
-        <a href="#" className="list-group-item list-group-item-action" aria-current="true">
-            Kontak
-        </a>
-        <a href="#" className="list-group-item list-group-item-action">Chat Langsung</a>
-        <a className="list-group-item list-group-item-action">Pemesanan Online</a>
+      <h6>Hubungi kami jika ada kesulitan</h6>
+    </div>
+      <div className="text-center">
+        <div className=''>
+          <a className='btn bg-secondary' href='mailto:wekals.wks@gmail.com'>Kontak Via Email</a>
+        </div>
+        <div className=''>
+          <a target={"_blank"} className='bg-secondary btn text-white' href='https://wa.me/6281389293521'>Chat Via Whatsapp</a>
+        </div>
+        <div className=''>
+          <a target={"_blank"} className='bg-secondary btn text-white' href='https://wa.me/6281389293521'>Pemesanan Online</a>
         </div>
     </div>
 

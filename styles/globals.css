@@ -443,7 +443,6 @@ text-align: end;
   right: 5px;
 width: 100%;
 padding: 30px 65px;
-
 }
 
 .btn-container{
@@ -459,7 +458,6 @@ padding: 30px 65px;
   font-size: 20px;
   margin-top: 10px;
   margin-top: 40px;
-  text-transform: uppercase;
   background-color: #f02d34;
   color: #fff;
   cursor: pointer;
@@ -468,6 +466,8 @@ padding: 30px 65px;
 }
 .btn:hover{
   transform: scale(1.1,1.1);
+  background-color: #f02d34;
+  color: white;
 }
 .product-detail-container{
   display: flex;
@@ -551,6 +551,7 @@ padding: 30px 65px;
   width: 100% !important;
   transition: transform 0.5s ease;
 }
+
 .buttons .add-to-cart:hover{
   transform:scale(1.1,1.1)
 }

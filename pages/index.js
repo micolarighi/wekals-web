@@ -21,9 +21,7 @@ const Home = ({ products, bannerData, galeryData, momentData, setupData }) => (
           products?.map((product) => 
           product.bestseller ? <Product key={product._id} product={product} /> : null )
         ))}
-
     </div>
-
   </div>
 );
 
