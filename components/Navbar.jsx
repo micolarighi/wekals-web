@@ -26,9 +26,16 @@ const Navbar = () => {
       <div>
       <a className="navbar-brand"><Link href="/"><Image className='pt-2' src={Logo} width={85} height={53}/></Link></a>
       </div>
-      <button onClick={handleToggle} class="navbar-toggler fw-bold pb-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <div className='cart-responsive'>
+            <button type="button" className='cart-icon' onClick={() => setShowCart(true)}>
+                  <AiOutlineShoppingCart />
+                  <span className="cart-item-qty">{totalQuantities}</span>
+            </button>
+                {showCart && <Cart />}
+      </div>
+        <button onClick={handleToggle} class="navbar-toggler fw-bold pb-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
       <div className={show ? "collapse navbar-collapse justify-content-center show" : "collapse navbar-collapse justify-content-center"} id="navbarNav">
       <div>
@@ -62,14 +69,6 @@ const Navbar = () => {
       </div>
 
             </div>
-        <div className='me-3'>
-            <button type="button" class="cart-icon fs-4" onClick={() => setShowCart(true)}>
-                  <AiOutlineShoppingCart />
-                  <span className="cart-item-qty">{totalQuantities}</span>
-            </button>
-                {showCart && <Cart />}
-
-        </div>
           </div>
       </nav>
     </>

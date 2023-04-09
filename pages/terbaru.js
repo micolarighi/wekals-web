@@ -20,17 +20,8 @@ export const getServerSideProps = async () => {
   const query = '*[_type == "product"]';
   const products = await client.fetch(query);
 
-  const bannerQuery = '*[_type == "banner"]';
-  const bannerData = await client.fetch(bannerQuery);
-
-  const galeryQuery = '*[_type == "galery"]';
-  const galeryData = await client.fetch(galeryQuery);
-
-  const momentQuery = '*[_type == "moment"]';
-  const momentData = await client.fetch(momentQuery);
-
   return {
-    props: { products, bannerData, galeryData, momentData}
+    props: { products}
   }
 }
 

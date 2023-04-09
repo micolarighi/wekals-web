@@ -1,3 +1,6 @@
+:root {
+  scroll-behavior: auto !important;
+}
 html,
 body, * {
   padding: 0;
@@ -121,13 +124,19 @@ width: 100%;
 
 }
 .cart-icon{
-  font-size: 20px;
+  font-size: 24px;
   color: gray;
   cursor: pointer;
   position: relative;
   transition: transform .4s ease;
   border: none;
   background-color: transparent;
+  position : absolute;
+  right : 0;
+  margin-right: 90px
+}
+.cart-responsive {
+  margin-bottom: 35px;
 }
 .cart-icon:hover{
   transform: scale(1.1,1.1);
@@ -718,10 +727,6 @@ margin-top: 160px;
   transition: transform 0.3s ease;
 }
 
-  .cart-icon {
-    margin-top: 15px;
-    margin-left: 10px;
-  }
 
   .nav-link:hover:after {
     transform: scaleX(1);
