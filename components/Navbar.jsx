@@ -8,7 +8,7 @@ import { Cart } from './';
 import { useStateContext } from '../context/StateContext';
 
 const Navbar = () => {
-  const { showCart, setShowCart, totalQuantities } = useStateContext();
+  const { showCart, setShowCart} = useStateContext();
   const [show, setShow] = React.useState(false)
 
   function handleShow() {
@@ -29,7 +29,6 @@ const Navbar = () => {
       <div className='cart-responsive'>
             <button type="button" className='cart-icon' onClick={() => setShowCart(true)}>
                   <AiOutlineShoppingCart />
-                  <span className="cart-item-qty">{totalQuantities}</span>
             </button>
                 {showCart && <Cart />}
       </div>

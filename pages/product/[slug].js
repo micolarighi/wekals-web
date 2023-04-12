@@ -11,8 +11,7 @@ const ProductDetails = ({ product, products }) => {
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
 
   const handleBuyNow = () => {
-    onAdd(product, qty, link);
-
+    onAdd(product, 1, link);
     setShowCart(true);
   }
 

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { AiOutlineMinus, AiOutlinePlus, AiOutlineLeft, AiOutlineShopping } from 'react-icons/ai';
 import { TiDeleteOutline } from 'react-icons/ti';
@@ -10,7 +10,9 @@ import { urlFor } from '../lib/client';
 
 const Cart = () => {
   const cartRef = useRef();
-  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove } = useStateContext();
+  const cartItems = JSON.parse(localStorage.getItem("cartItems"))
+  const {setShowCart, toggleCartItemQuanitity, onRemove} = useStateContext();
+  const totalQuantities = cartItems.length
 
   return (
     <div className="cart-wrapper" ref={cartRef}>
@@ -51,7 +53,7 @@ const Cart = () => {
                 </div>
                 <div className="flex bottom">
                   <div>
-                  <a href={item.link} target="_blank" className="checkoutBtn btn btn-primary">BELI DI TOKOPEDIA</a>
+                  <a href={item.link} target="_blank" className="checkoutBtn fs-6 btn btn-primary">BELI DI TOKOPEDIA</a>
                   </div>
                   <button
                     type="button"
@@ -65,18 +67,6 @@ const Cart = () => {
             </div>
           ))}
         </div>
-        {cartItems.length >= 1 && (
-          <div className="cart-bottom">
-          <div className='text-start'>
-                <span className='text-danger'>PENTING</span>
-                <h5 className='text-secondary'>Total Harga belum termasuk ongkir</h5>
-            </div>
-            <div className="total">
-              <h3>Subtotal:</h3>
-              <h3>Rp. {totalPrice}</h3>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   )
