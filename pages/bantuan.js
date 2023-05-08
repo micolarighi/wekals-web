@@ -1,7 +1,13 @@
 import React from 'react'
 import { client } from '../lib/client';
 import { Product, FooterBanner, HeroBanner, Navbar, Galery, Moment, EmptyItem } from '../components';
+import { toast } from 'react-hot-toast';
 
+
+function emailOnClick () {
+  navigator.clipboard.writeText('wekals.wks@gmail.com')
+  toast.success('Email berhasil di copy')
+}
 const Bantuan = ({ products, bannerData, galeryData, momentData }) => (
   <div>
     <div className="products-heading">
@@ -10,13 +16,13 @@ const Bantuan = ({ products, bannerData, galeryData, momentData }) => (
     </div>
       <div className="text-center">
         <div className=''>
-          <a className='btn bg-secondary' href='mailto:wekals.wks@gmail.com'>Kontak Via Email</a>
+          <button className='btn bg-secondary' onClick={emailOnClick}>Kontak Via Email</button>
         </div>
         <div className=''>
           <a target={"_blank"} className='bg-secondary btn text-white' href='https://wa.me/6281389293521'>Chat Via Whatsapp</a>
         </div>
         <div className=''>
-          <a target={"_blank"} className='bg-secondary btn text-white' href='https://wa.me/6281389293521'>Pemesanan Online</a>
+          <a target={"_blank"} className='bg-secondary btn text-white' href='https://www.tokopedia.com/wekals'>Pemesanan Online</a>
         </div>
     </div>
 
