@@ -170,7 +170,7 @@ width: 100%;
 
 }
 .product-card:hover{
-  transform: scale(1.1,1.1)
+  opacity: 0.5;
 }
 .product-image{
   border-radius: 15px;
@@ -489,7 +489,7 @@ padding: 30px 65px;
   border-radius: 15px;
    background-color: #ebebeb;
 
-  width: 400px;
+  width: 520px;
   height: 400px;
   cursor: pointer;
   transition: .3s ease-in-out;
