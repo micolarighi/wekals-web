@@ -174,8 +174,7 @@ width: 100%;
 }
 .product-image{
   border-radius: 15px;
- background-color: #ebebeb;
-  transform: scale(1, 1);
+  background-color: #ebebeb;
   transition: transform 0.5s ease;
 }
 
