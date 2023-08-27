@@ -28,7 +28,7 @@ const Footer = () => {
           <h4>Kontak Kami</h4>
           <div className='d-flex flex-column'>
             <div>
-              <FaEnvelope className='mr-1 ms-3 fs-6'/> <span className='fs-6'>wekals.wks@gmail.com</span>
+              <span className='fs-6'>wekals.wks@gmail.com</span>
             </div>
             <div style={{marginTop:-20}}>
               <FaPhone className='mr-1 ms-3 fs-6'/> <span className='fs-6'>081389293521</span> 
