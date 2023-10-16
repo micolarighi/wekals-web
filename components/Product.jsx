@@ -22,9 +22,8 @@ const Product = ({ product: { image, name, slug, price, publish } }) => {
         <div className="product-card">
           <img 
             src={urlFor(image && image[0])}
-            width={330}
-            height={200}
-            className="product-image"
+            width={300}
+            className="product-image img-thumbnail"
           />
           <p className="product-name">{name}</p>
           <p className="product-price"> {`Rp. ${price}` }</p>

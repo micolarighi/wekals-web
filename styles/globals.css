@@ -472,8 +472,8 @@ padding: 30px 65px;
   border-radius: 15px;
   background-color: #ebebeb;
 
-  width: 650px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   cursor: pointer;
   transition: .3s ease-in-out;
 }
