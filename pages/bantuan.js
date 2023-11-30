@@ -8,6 +8,7 @@ function emailOnClick () {
   navigator.clipboard.writeText('wekals.wks@gmail.com')
   toast.success('Email berhasil di copy')
 }
+
 const Bantuan = ({ products, bannerData, galeryData, momentData }) => (
   <div>
     <div className="products-heading">

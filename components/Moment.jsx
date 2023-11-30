@@ -8,7 +8,6 @@ import moment from "@/sanity_wekals-web/schemas/moment";
 const Moment = ({ moment }) => {
   return (
     <div>
-      <h3 className="mb-3 mt-5 section-title">Moment</h3>
       <Carousel interval={2000}>
       {moment.map((item) => (
           <Carousel.Item>

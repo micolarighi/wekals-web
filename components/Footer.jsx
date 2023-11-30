@@ -11,17 +11,8 @@ const Footer = () => {
       <hr />
         <div className='icons mx-3'>
           <h4>Ikuti Kami</h4>
-          <Link href={''}> 
+          <Link href={'https://www.instagram.com/wekals__/'}> 
             <AiFillInstagram  className='mx-1 fs-3'/>
-          </Link>
-          <Link href={''}>
-            <AiOutlineTwitter  className='mx-1 fs-3'/>
-          </Link>
-          <Link href={''}>
-            <AiFillFacebook  className='mx-1 fs-3'/>
-          </Link>
-          <Link href={''}>
-            <FaTiktok className='mx-1 fs-3'/>
           </Link>
         </div>
         <div className='icons mx-3'>
