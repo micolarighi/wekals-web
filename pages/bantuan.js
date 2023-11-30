@@ -17,17 +17,15 @@ const Bantuan = ({ products, bannerData, galeryData, momentData }) => (
     </div>
       <div className="text-center">
         <div className=''>
-          <button className='btn bg-secondary' onClick={emailOnClick}>Kontak Via Email</button>
+          <button className='btn bg-secondary fs-3' onClick={emailOnClick}>Kontak Via Email</button>
+        </div>
+        <div className='my-2'>
+          <a target={"_blank"} className='bg-secondary btn text-white fs-3' href='https://wa.me/6281389293521'>Chat Via Whatsapp</a>
         </div>
         <div className=''>
-          <a target={"_blank"} className='bg-secondary btn text-white' href='https://wa.me/6281389293521'>Chat Via Whatsapp</a>
-        </div>
-        <div className=''>
-          <a target={"_blank"} className='bg-secondary btn text-white' href='https://www.tokopedia.com/wekals'>Pemesanan Online</a>
+          <a target={"_blank"} className='bg-secondary btn text-white fs-3' href='https://www.tokopedia.com/wekals'>Pemesanan Online</a>
         </div>
     </div>
-
-
   </div>
 );
 
