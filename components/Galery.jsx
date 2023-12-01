@@ -8,6 +8,7 @@ import galery from "@/sanity_wekals-web/schemas/galery";
 const Galery = ({ galery }) => {
   return (
     <div>
+      <h3 className="mb-3 mt-5 section-title">Galery</h3>
       <Carousel interval={2000}>
       {galery.map((item) => (
           <Carousel.Item>

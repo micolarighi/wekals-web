@@ -10,16 +10,10 @@ import {
 } from "../components";
 
 const Home = ({ products, bannerData, galeryData, momentData, setupData }) => (
-  <div className="row">
-    <div className="col-md-4">
-      <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
-    </div>
-    <div className="col-md-4">
-      <Galery galery={galeryData} />
-    </div>
-    <div className="col-md-4">
-      <Moment moment={momentData} />
-    </div>
+  <div>
+    <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
+    <Galery galery={galeryData} />
+    <Moment moment={momentData} />
 
     <div className="products-heading">
       <h2>{setupData[0].custom_section_1}</h2>
